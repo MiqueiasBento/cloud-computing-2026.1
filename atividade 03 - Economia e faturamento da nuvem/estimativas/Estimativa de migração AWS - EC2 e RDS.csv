@@ -1,0 +1,15 @@
+﻿Resumo da estimativa
+Custo inicial,Custo mensal,Total 12 months cost,Moeda
+0,1951.72,23420.64,USD
+,,* Inclui um custo inicial
+
+
+Estimativa detalhada
+Hierarquia de grupos,Região,Descrição,Serviço,Pagamento adiantado,Mensal,First 12 months total,Moeda,Status,Resumo da configuração
+My Estimate,América do Sul (São Paulo),Migração para a nuvem,Amazon EC2 ,0,1323.563,15882.76,USD,,"Locação (Instâncias compartilhadas), Sistema operacional (Linux), Carga de trabalho (Consistent, Número de instâncias: 1), Instância do EC2 avançada (c6g.16xlarge), Pricing strategy (Compute Savings Plans 3yr  No Upfront), Habilitar monitoramento (desabilitada), DT Entrada: Not selected (0 TB por mês), DT Saída: Not selected (0 TB por mês), DT Intrarregião: (0 TB por mês)"
+My Estimate,América do Sul (São Paulo),,Amazon RDS Custom for Oracle,0,628.164,7537.97,USD,,"Armazenamento para cada instância do RDS Custom (SSD de uso geral (gp2)), Quantidade de armazenamento (512 GB), Tipo de instância (db.m5.large), Número de instâncias do RDS Custom para Oracle (1), Utilização (somente sob demanda) (100 %Utilized/Month), Database Edition (Enterprise), Opção de implantação (Multi-AZ), Modelo de preço (OnDemand)"
+
+
+
+Confirmação
+"* A Calculadora de Preços da AWS fornece apenas uma estimativa de suas taxas da AWS e não inclui nenhuma taxa aplicável. Suas taxas reais dependem de vários fatores, inclusive de seu uso real dos serviços da AWS."
