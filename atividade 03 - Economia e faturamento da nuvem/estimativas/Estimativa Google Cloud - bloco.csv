@@ -1,0 +1,12 @@
+service_display_name,name,quantity,region,service_id,sku,"total_price, USD",notes
+Instances (Compute Engine),Micro Instance with burstable CPU running in Americas,52560.0,us-east1,6F81-5844-456A,5CE5-087B-6C3C,399.456,
+Instances (Compute Engine),Nvidia Tesla T4 GPU running in Americas,52560.0,us-east1,6F81-5844-456A,88B8-C3ED-03F0,18396,
+Instances (Compute Engine),SSD backed PD Capacity,720.0,us-east1,6F81-5844-456A,B188-61DD-52E4,122.4,
+,,,,,,,
+,,,,,Total Price:,18917.856,
+,,,,,,,
+"Prices are in US dollars, effective date is 2026-04-04T14:27:22.964Z",,,,,,,
+,,,,,,,
+The estimated fees provided by Google Cloud Pricing Calculator are for discussion purposes only and are not binding on either you or Google. Your actual fees may be higher or lower than the estimate.,,,,,,,
+,,,,,,,
+Url to the estimate:,https://cloud.google.com/calculator?dl=CjhDaVF4WVRBMllqZ3hPQzFoWmpZeUxUUmpPVFl0WVRGaVpTMWlZVEF3WmpkaU9UbG1NR1VRQVE9PRokMzU3QTFBNTEtNzA2NS00NjdDLTlENUQtRkFENkFDNkZFNkY4,,,,,,
