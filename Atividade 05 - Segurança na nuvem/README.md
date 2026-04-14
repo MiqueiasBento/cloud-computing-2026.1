@@ -4,11 +4,17 @@
 
 Resolva o Teste de Conhecimento do Módulo 4 - Segurança na nuvem.
 
-> Prazo de entrega até domingo, 19 abr 2026, 17:40
+![alt text](./registros/teste-modulo-4.png)
+
+> Teste realizado em 14/04
 
 ## Questão 02 - No laboratório
 
 > A ser entregue na aula via MOODLE - 07/04 - não vale se for entregue depois
+
+[Acesso ao laboratório](./Q2%20-%20Lab%201%20de%20Introdução%20ao%20IAM.md)
+
+> Realizado em 07/04
 
 Complete todas as etapas do Laboratório 1 - Introdução ao IAM.
 
