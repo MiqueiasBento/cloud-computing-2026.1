@@ -4,6 +4,8 @@
 
 Resolva o Teste de Conhecimento do Módulo 7 - Armazenamento.
 
+![Teste de conhecimento](./registro-teste-de-conhecimento.png)
+
 ## Questão 02
 > No laboratório - A ser entregue na aula - 05/05 - não vale se for entregue depois
 
