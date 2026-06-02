@@ -75,49 +75,48 @@ Ajuste os comandos conforme o nome e execute.
 Alguns comandos vão resultar num erro propositadamente.
 Relate o resultado de cada um. Pode ser textual, pode ser um print de parte da tela.
 
-* `aws s3 ls`
-    ![comando buckets 01](./registros/buckets-comando-01.png)
-  Deveria listar todos os buckets S3 disponíveis na conta AWS configurada no ambiente.
-  Não apareceu nenhum bucket, pois ainda não criei nenhum.
+* `aws s3 ls`  
+![comando buckets 01](./registros/buckets-comando-01.png)  
+Listou os buckets S3 disponíveis na conta AWS configurada no ambiente. No caso, nenhum bucket estava disponível até o momento.
 
-* `aws s3 mb s3://bucketA`
-    ![comando buckets 02](./registros/buckets-comando-02.png)
-  O comando apresentou erro porque os nomes de buckets no Amazon S3 precisam ser únicos globalmente. O nome informado já estava em uso ou já pertencia à conta utilizada.
-  Ainda tentei várias vezes, só depois quando pesquisei foi que entendi.
+* `aws s3 mb s3://bucketA`  
+![comando buckets 02](./registros/buckets-comando-02.png)  
+Finalmente criou um bucket na conta AWS configurada no ambiente.
+Tive que consultar as regras da criação de buckets S3, pois a primeira tentativa falhou.  
+O nome do bucket criado foi `bucketxbq4yli0r7w1k7cmiyw7hcajsctynp`.
 
-* `aws s3 ls s3://bucketA`
-  ![comando buckets 03](./registros/buckets-comando-03.png)
-  O comando apresentou erro porque o bucket informado não existia no momento da execução.
+* `aws s3 ls s3://bucketA`  
+![comando buckets 03](./registros/buckets-comando-03.png)  
+O terminal não exibe nenhuma linha de texto e pula para a próxima linha, pois o bucket não tem nenhum arquivo ainda.
 
-* `cat > novo_arquivo.txt`
-  ![Criando arquivo](./registros/buckets-comando-04.png)
-  Criou um arquivo de texto chamado `novo_arquivo.txt` diretamente pelo terminal, permitindo inserir conteúdo manualmente.
+* `cat > novo_arquivo.txt`  
+![comando buckets 04](./registros/buckets-comando-04.png)  
+Criação de um arquivo de texto chamado `novo_arquivo.txt` diretamente pelo terminal, coloquei o texto simples "Teste questão 03.".
 
-* `aws s3 cp novo_arquivo.txt s3://bucketA`
-  ![Criando arquivo](./registros/buckets-comando-05.png)
-  O comando apresentou erro porque o bucket informado não existia no momento da execução.
+* `aws s3 cp novo_arquivo.txt s3://bucketA`  
+![comando buckets 05](./registros/buckets-comando-05.png)  
+Confirmação do upload do arquivo local para a nuvem
 
-* `aws s3 rb s3://bucketA`
-  ![Criando arquivo](./registros/buckets-comando-06.png)
-  O comando apresentou erro porque o bucket ainda continha objetos armazenados, e o Amazon S3 exige que o bucket esteja vazio antes de sua remoção.
+* `aws s3 rb s3://bucketA`  
+![comando buckets 06](./registros/buckets-comando-06.png)  
+O comando `rb` (remove bucket) falhou porque o bucket recebeu o arquivo no passo anterior.
 
-* `aws s3 cp s3://bucketA/novo_arquivo.txt velho_arquivo.txt`
-  ![Criando arquivo](./registros/buckets-comando-07.png)
-  O comando apresentou erro porque o objeto informado não foi encontrado no bucket especificado.
+* `aws s3 cp s3://bucketA/novo_arquivo.txt velho_arquivo.txt`  
+![comando buckets 07](./registros/buckets-comando-07.png)  
+Baixou o arquivo do S3 para a máquina local do CloudShell com um novo nome.
 
-* `aws s3 mb s3://bucketB`
-  ![Criando arquivo](./registros/buckets-comando-08.png)
-  Também apresentou erro, pois o nome do bucket informado já estava em uso ou já pertencia à conta utilizada.
+* `aws s3 mb s3://bucketB`  
+![comando buckets 08](./registros/buckets-comando-08.png)  
+Confirmação de que o seu segundo bucket (`bucketzbq4yli0r7w1k7cmiyw7hcajsctynp`) foi criado.
 
-* `aws s3 mv s3://bucketA/novo_arquivo.txt s3://bucketB/outro_novo_arquivo.txt`
-  ![Criando arquivo](./registros/buckets-comando-09.png)
-  O comando apresentou erro devido à inexistência do bucket informado ou restrições de acesso configuradas na conta AWS.
+* `aws s3 mv s3://bucketA/novo_arquivo.txt s3://bucketB/outro_novo_arquivo.txt`  
+![comando buckets 09](./registros/buckets-comando-09.png)  
+Pelo que entendi, o comando moveu o arquivo entre os buckets (copia para o B e deleta do A).
 
-* `aws s3 rb s3://bucketA`
-  ![Criando arquivo](./registros/buckets-comando-10.png)
-  O comando apresentou erro porque o bucket informado já havia sido removido anteriormente.
+* `aws s3 rb s3://bucketA`  
+![comando buckets 10](./registros/buckets-comando-10.png)  
+Removeu o único arquivo que estava dentro do bucket finalizado em p, ele agora está vazio e pode ser excluído.
 
-* `aws s3 rb s3://bucketB --force`
-  ![Criando arquivo](./registros/buckets-comando-11.png)
-  O comando deveria remover automaticamente os objetos existentes no bucket antes de realizar sua exclusão definitiva utilizando a opção --force.
-  Mas como o bucket não existia, o comando apresentou erro.
+* `aws s3 rb s3://bucketB --force`  
+![comando buckets 11](./registros/buckets-comando-11.png)  
+O bucket finalizado em q continha o arquivo `outro_novo_arquivo.txt`, e o parâmetro `--force` apagou primeiro o arquivo interno e depois removeu o bucket de forma forçada.
